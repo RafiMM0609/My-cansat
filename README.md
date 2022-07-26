@@ -30,7 +30,8 @@ First before you run all programs you need to test your sensor is working porper
 If we use I2C we need to know the address of the sensor first, different when we use analog or digital pins we only need to state which pin we will use. When we use I2C we just need to state 2 pins which one for SCL and SDA. you can run **I2C_scanner.ino** and open the serial monitor to get sensor address
 ### 2. Run MPU950 
 If you didn't have the MPU9250 library you can download it and include the library to arduino ide, and run the code. ***dont forget to fill mpu.setup() with the sensor address***
-> MPU9250 https://www.arduino.cc/reference/en/libraries/mpu9250/ <br> BMP388 https://www.arduino.cc/reference/en/libraries/107-arduino-bmp388/
+> MPU9250 https://www.arduino.cc/reference/en/libraries/mpu9250/ <br> BMP388 https://www.arduino.cc/reference/en/libraries/107-arduino-bmp388/ 
+
 in serial monitor you must get the value of the sensor, if you didn't get it you must check **your wiring** or change the sensor.Repeat this step for other sensor
 ### 3. Combine all componen
 After make sure that the sensors are running properly, we need to combine all the sensors with the ESP32 and Combine the code too. You can run **MyCansat.ino**
