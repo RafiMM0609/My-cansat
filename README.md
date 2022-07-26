@@ -1,6 +1,6 @@
 # My-cansat
 Used for temperature monitoring, vehicle attitude monitoring including roll pitch yaw, and vehicle altitude monitoring in the air.
-In this project I used **ESP32** for the microcontroller, **BMP380** for barometer reading, **MPU9250** for vehicle attitude reading for example gyro x, y, z and accel x, y, z
+In this project I used **ESP32** for the microcontroller, **BMP388** for barometer reading, **MPU9250** for vehicle attitude reading for example gyro x, y, z and accel x, y, z
 ## ESP32
 I wanted to use Teensy 4.0 but I'm not familiar with Teensy 4.0, at that time I had little research time so I chose to use ESP 32. Actually, ESP32 is enough to be used as a microcontroller in this project.
 - ESP32 
@@ -17,7 +17,7 @@ From the picture above, we can see if I combined the SCL of many sensors and als
 - SCL to ESP32 pin 32
 - GND to GND
 - MPU9250 5V
-- BMP380 3.3V
+- BMP388 3.3V
 > for the SCL and SDA you can change it according to your needs.
 ## How to Work
 First before you run all programs you need to test your sensor is working porperly or not, i advise you to use project board and jumper wires so that you can easily connect the sensors and change them if the sensor isn't correct. You can setup..
@@ -29,8 +29,11 @@ First before you run all programs you need to test your sensor is working porper
 ### 1. Find out sensor address
 If we use I2C we need to know the address of the sensor first, different when we use analog or digital pins we only need to state which pin we will use. When we use I2C we just need to state 2 pins which one for SCL and SDA. you can run **I2C_scanner.ino** and open the serial monitor to get sensor address
 ### 2. Run MPU950 
-If you didn't have the MPU9250 library you can download it https://www.arduino.cc/reference/en/libraries/mpu9250/ , include the library to arduino ide, and run the code. 
+If you didn't have the MPU9250 library you can download it and include the library to arduino ide, and run the code. 
 > dont forget to fill mpu.setup() with the sensor address
+MPU9250 https://www.arduino.cc/reference/en/libraries/mpu9250/
+BMP388 https://www.arduino.cc/reference/en/libraries/107-arduino-bmp388/
+
 
 in serial monitor you must get the value of the sensor, if you didn't get it you must check **your wiring** or change the sensor.Repeat this step for other sensor
 ### 3. Combine all componen
