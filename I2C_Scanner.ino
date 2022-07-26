@@ -1,8 +1,6 @@
 // ESP32 I2C Scanner
 // Based on code of Nick Gammon  http://www.gammon.com.au/forum/?id=10896
 // ESP32 DevKit - Arduino IDE 1.8.5
-// Device tested PCF8574 - Use pullup resistors 3K3 ohms !
-// PCF8574 Default Freq 100 KHz 
 
 #include <Wire.h>
 
@@ -10,7 +8,7 @@ void setup()
 {
   Serial.begin (115200);
   //Serial.begin (9600);  
-  Wire.begin (33, 22);   // sda= GPIO_21 /scl= GPIO_22
+  Wire.begin (33, 32);   // sda= GPIO_21 /scl= GPIO_22
 }
 
 void Scanner ()
