@@ -22,10 +22,10 @@ From the picture above, we can see if I combined the SCL of many sensors and als
 ## How to Work
 First before you run all programs you need to test your sensor is working porperly or not, i advise you to use project board and jumper wires so that you can easily connect the sensors and change them if the sensor isn't correct. You can setup..
 - MPU 9250
-  -SDA ---> 33
-  -SCL ---> 32
-  -GND to GND
-  -Vin ---> 5V
+  - SDA ---> 33
+  - SCL ---> 32
+  - GND to GND
+  - Vin ---> 5V
 ### 1. Find out sensor address
 If we use I2C we need to know the address of the sensor first, different when we use analog or digital pins we only need to state which pin we will use. When we use I2C we just need to state 2 pins which one for SCL and SDA. you can run **I2C_scanner.ino** and open the serial monitor to get sensor address
 ### 2. Run MPU950 
