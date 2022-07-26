@@ -1,6 +1,6 @@
 # My-cansat
 Used for temperature monitoring, vehicle attitude monitoring including roll pitch yaw, and vehicle altitude monitoring in the air.
-In this project I used **ESP32** for the microcontroller, **BMP388** for barometer reading, **MPU9250** for vehicle attitude reading for example gyro x, y, z and accel x, y, z
+In this project I used **ESP32** for the microcontroller, **BMP388** for barometer reading, **MPU9250** for vehicle attitude reading for example gyro x, y, z and accel x, y, z. The value of the sensor can be monitored in real time with **XBEE S2C** which transmits data to GCS.
 ## ESP32
 I wanted to use Teensy 4.0 but I'm not familiar with Teensy 4.0, at that time I had little research time so I chose to use ESP 32. Actually, ESP32 is enough to be used as a microcontroller in this project.
 - ESP32 
@@ -35,3 +35,11 @@ If you didn't have the MPU9250 library you can download it and include the libra
 in serial monitor you must get the value of the sensor, if you didn't get it you must check **your wiring** or change the sensor.Repeat this step for other sensor
 ### 3. Combine all componen
 After make sure that the sensors are running properly, we need to combine all the sensors with the ESP32 and Combine the code too. You can run **MyCansat.ino**
+##Data Communication
+After all of the value from the sensor appear, if you want to show the realtime data when the vehicle in the air we need to setup the data communication for ESP32 to GCS with XBEE S2C. Before we  You can setup
+- XBEE S2C to ESP32
+  - TX --> RX
+  - RX --> TX
+  - Vin --> 5V
+  - GND --> GND
+
