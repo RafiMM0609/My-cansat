@@ -18,7 +18,7 @@ From the picture above, we can see if I combined the SCL of many sensors and als
 - GND to GND
 - MPU9250 5V
 - BMP380 3.3V
-> for the SCL and SDA you can change it according to your needs
+> for the SCL and SDA you can change it according to your needs.
 ## How to Work
 First before you run all programs you need to test your sensor is working porperly or not, i advise you to use project board and jumper wires so that you can easily connect the sensors and change them if the sensor isn't correct. You can setup..
 - MPU 9250
@@ -26,5 +26,12 @@ First before you run all programs you need to test your sensor is working porper
   -SCL ---> 32
   -GND to GND
   -Vin ---> 5V
-### Find out sensor address
-If we use I2C we need to know the address of the sensor first, different when we use analog or digital pins we only need to state which pin we will use. When we use I2C we just need to state 2 pins which one for SCL and SDA. you can run code below to know the sensor address
+### 1. Find out sensor address
+If we use I2C we need to know the address of the sensor first, different when we use analog or digital pins we only need to state which pin we will use. When we use I2C we just need to state 2 pins which one for SCL and SDA. you can run **I2C_scanner.ino** and open the serial monitor to get sensor address
+### 2. Run MPU950 
+If you didn't have the MPU9250 library you can download it https://www.arduino.cc/reference/en/libraries/mpu9250/ , include the library to arduino ide, and run the code. 
+> dont forget to fill mpu.setup() with the sensor address
+
+in serial monitor you must get the value of the sensor, if you didn't get it you must check **your wiring** or change the sensor.Repeat this step for other sensor
+### Combine all componen
+After make sure that the sensors are running properly, we need to combine all the sensors with the ESP32 and Combine the code too. You can run **MyCansat.ino**
