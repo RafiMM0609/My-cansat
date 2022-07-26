@@ -8,7 +8,7 @@ void setup()
 {
   Serial.begin (115200);
   //Serial.begin (9600);  
-  Wire.begin (33, 32);   // sda= GPIO_21 /scl= GPIO_22
+  Wire.begin (33, 32);   // sda= GPIO_33 /scl= GPIO_32
 }
 
 void Scanner ()
