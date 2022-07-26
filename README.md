@@ -11,7 +11,7 @@ I wanted to use Teensy 4.0 but I'm not familiar with Teensy 4.0, at that time I 
   - 7 x UART, 3 x I2C, 3 x SPI.
 ## Skema Project
 I connect MPU950, SHT 31, and BMP38 to ESP32 to send sensor data and sort it so that later ESP32 will send sorted data to Ground Station via XBee transmission media. I use I2C data interface to connect those 3 sensors with ESP32, I2C stands for Inter-Integrated Circuit. It is a bus interface connection protocol incorporated into devices for serial communication. With I2C we can save more pin in ESP32, for 3 sensor we just need 2 pin ford sda and scl then 2 pin for power and ground. This's my wiring diagram
-![wiring_diagram.jpeg]( {[link gambar](https://github.com/RafiMM0609/My-cansat/blob/main/Picture/wiring_diagram.jpeg)} )
+![wiring_diagram.jpeg](https://github.com/RafiMM0609/My-cansat/blob/main/Picture/wiring_diagram.jpeg)
 From the picture above, we can see if I combined the SCL of many sensors and also for SDA, GND, and Power, the goal is to simplify wiring, so when there is damage or error we can more easily fix it and also we can save more space in the PCB. You can setup..
 - SDA to ESP32 pin 33
 - SCL to ESP32 pin 32
