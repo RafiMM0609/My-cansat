@@ -13,4 +13,18 @@ I wanted to use Teensy 4.0 but I'm not familiar with Teensy 4.0, at that time I 
 I connect MPU950, SHT 31, and BMP38 to ESP32 to send sensor data and sort it so that later ESP32 will send sorted data to Ground Station via XBee transmission media. I use I2C data interface to connect those 3 sensors with ESP32, I2C stands for Inter-Integrated Circuit. It is a bus interface connection protocol incorporated into devices for serial communication. With I2C we can save more pin in ESP32, for 3 sensor we just need 2 pin ford sda and scl then 2 pin for power and ground. This's my wiring diagram
 <Picture [Diagram ESP 32 and another sensor]>
 From the picture above, we can see if I combined the SCL of many sensors and also for SDA, GND, and Power, the goal is to simplify wiring, so when there is damage or error we can more easily fix it and also we can save more space in the PCB. You can setup..
--SCL
+- SDA to ESP32 pin 33
+- SCL to ESP32 pin 32
+- GND to GND
+- MPU9250 5V
+- BMP380 3.3V
+> for the SCL and SDA you can change it according to your needs
+## How to Work
+First before you run all programs you need to test your sensor is working porperly or not, i advise you to use project board and jumper wires so that you can easily connect the sensors and change them if the sensor isn't correct. You can setup..
+- MPU 9250
+  -SDA ---> 33
+  -SCL ---> 32
+  -GND to GND
+  -Vin ---> 5V
+### Find out sensor address
+If we use I2C we need to know the address of the sensor first, different when we use analog or digital pins we only need to state which pin we will use. When we use I2C we just need to state 2 pins which one for SCL and SDA. you can run code below to know the sensor address
