@@ -35,7 +35,7 @@ If you didn't have the MPU9250 library you can download it and include the libra
 in serial monitor you must get the value of the sensor, if you didn't get it you must check **your wiring** or change the sensor.Repeat this step for other sensor
 ### 3. Combine all componen
 After make sure that the sensors are running properly, we need to combine all the sensors with the ESP32 and Combine the code too. You can run **MyCansat.ino** <br>
-##Data Communication
+## Data Communication
 After all of the value from the sensor appear, if you want to show the realtime data when the vehicle in the air we need to setup the data communication for ESP32 to GCS with XBEE S2C. Before we  You can setup
 - XBEE S2C to ESP32
   - TX --> RX
