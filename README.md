@@ -33,5 +33,5 @@ If you didn't have the MPU9250 library you can download it https://www.arduino.c
 > dont forget to fill mpu.setup() with the sensor address
 
 in serial monitor you must get the value of the sensor, if you didn't get it you must check **your wiring** or change the sensor.Repeat this step for other sensor
-### Combine all componen
+### 3. Combine all componen
 After make sure that the sensors are running properly, we need to combine all the sensors with the ESP32 and Combine the code too. You can run **MyCansat.ino**
