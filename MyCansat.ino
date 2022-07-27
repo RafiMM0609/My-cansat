@@ -9,13 +9,12 @@ SoftwareSerial zigbee(1,3);
 unsigned long myTime;
 Adafruit_BMP3XX bmp; 
 MPU9250 mpu;
-float temperature, pressure, altitude,ketinggian;
-
+float temperature, pressure, altitude;
 float vol = random(4.9,5.7);
 int err = random(4,9);
 int temp = 0;
-int menit = 0;
-int jam = 0;
+int minute = 0;
+int hours = 0;
 int x = 1;
 int y = 0;
 int z = 1;
@@ -58,11 +57,11 @@ void loop(){
 void Timemission(){
   myTime = millis();
   temp = myTime/1000;
-  menit = temp/60;
-  jam = menit/60;
-  Serial.print(jam);  
+  minute = temp/60;
+  hours = minute/60;
+  Serial.print(hours);  
   Serial.print(":");
-  Serial.print(menit);
+  Serial.print(minute);
   Serial.print(":");
   Serial.print(temp%60); // prints time since program started
 }
@@ -162,26 +161,4 @@ void BMPprint(){
 
 void BMP_calibraton_timee(){
   i = g++;
-  }
-
-void servo_setup(){
-  myservo.attach(9); //9 bs dignti nmr pin esp32
-  }
-
-void east_camera(){
-  yer = mpu.getYaw(), 2;
-  yval = 0-yer;
-
-  if (yval >= 3) {
-    for (pos = 0; pos <=180; pos +=1){
-      mysevo.write(pos);
-      delay(15);
-      }
-    }
-    else if (yval <= -3){
-      for (pos = 180; pos >=0; pos -=1){
-        myservo.write(pos);
-        delay(15);
-        }
-      }
   }
