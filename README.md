@@ -38,9 +38,11 @@ After make sure that the sensors are running properly, we need to combine all th
 ## Data Communication
 After all of the value from the sensor appear, if you want to show the realtime data when the vehicle in the air we need to setup the data communication for ESP32 to GCS with XBEE S2C. Before we start using XBee in our ESP32, we need to pair 2 XBee first one for the vehicle and GCS. You can setup
 - XBEE S2C to ESP32
-  - TX --> RX
-  - RX --> TX
+  - TX --> RX (3)
+  - RX --> TX (1)
   - Vin --> 5V
   - GND --> GND
   
-For the experiment we must have XCTU software on laptop / PC to see data sent by ESP32. After we have done setup we need test if the ESP32 and PC connected correctly. You can run **XBEE_transmitter.ino** then we can see in XCTU
+For the experiment we must have XCTU software on laptop / PC to see data sent by ESP32. After we have done setup we need test if the ESP32 and PC connected correctly. You can run **XBEE_transmitter.ino** then we can see in XCTU Console, it will show "success", if you have trouble check RX / TX wiring or the power input in XBEE or your XBEE calibration is wrong.
+## Final execution
+Once the setup is complete for data communication and sensors, we need to combine all the code and commponents, and than we can see sensor the value in the XCTU console. You can run **MyCansat.ino**
