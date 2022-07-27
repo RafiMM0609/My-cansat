@@ -36,10 +36,10 @@ in serial monitor you must get the value of the sensor, if you didn't get it you
 ### 3. Combine all componen
 After make sure that the sensors are running properly, we need to combine all the sensors with the ESP32 and Combine the code too. You can run **MyCansat.ino** <br>
 ## Data Communication
-After all of the value from the sensor appear, if you want to show the realtime data when the vehicle in the air we need to setup the data communication for ESP32 to GCS with XBEE S2C. Before we  You can setup
+After all of the value from the sensor appear, if you want to show the realtime data when the vehicle in the air we need to setup the data communication for ESP32 to GCS with XBEE S2C. Before we start using XBee in our ESP32, we need to pair 2 XBee first one for the vehicle and GCS. You can setup
 - XBEE S2C to ESP32
   - TX --> RX
   - RX --> TX
   - Vin --> 5V
   - GND --> GND
-
+For the experiment we must have XCTU software on laptop / PC to see data sent by ESP32. After we have done setup we need test if the ESP32 and PC connected correctly. You can run 
