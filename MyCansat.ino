@@ -6,8 +6,6 @@
 #include <Wire.h>
 #include <Servo.h>
 SoftwareSerial zigbee(1,3);
-
-Servo myservo;
 unsigned long myTime;
 Adafruit_BMP3XX bmp; 
 MPU9250 mpu;
