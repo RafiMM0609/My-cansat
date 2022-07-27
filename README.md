@@ -42,4 +42,5 @@ After all of the value from the sensor appear, if you want to show the realtime 
   - RX --> TX
   - Vin --> 5V
   - GND --> GND
+  
 For the experiment we must have XCTU software on laptop / PC to see data sent by ESP32. After we have done setup we need test if the ESP32 and PC connected correctly. You can run 
